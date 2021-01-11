@@ -17,11 +17,11 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: sync xmly_speed
+      - name: sync hundun
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
-          source_repo: "https://github.com/Zero-S1/xmly_speed.git"
+          source_repo: "https://github.com/whyour/hundun.git"
           source_branch: "master"
           destination_branch: "main"
           github_token: ${{ secrets.PAT }}

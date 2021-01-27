@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
+        token: ${{ secrets.didi_token }} 
+        cityId: ${{ secrets.didi_city_id }}
+        lid: ${{ secrets.didi_lid }}
         didiTokenKey: ${{ secrets.didi_token }}
         didiCityIdKey: ${{ secrets.didi_city_id }}
         didiLidKey: ${{ secrets.didi_lid }}

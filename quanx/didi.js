@@ -34,6 +34,9 @@
  **/
 
 const $ = new Env('🚕滴滴出行');
+const token = process.env.DIDI_TOKEN
+const cityId = process.env.DIDI_CITY
+const lid = process.env.DIDI_LID
 const API_HOST = 'https://bosp-api.xiaojukeji.com/';
 $.showLog = $.getdata('didi_showLog') ? $.getdata('didi_showLog') === 'true' : false;
 $.didiLottery = $.getdata('didi_lottery') ? $.getdata('didi_lottery') === 'true' : false;

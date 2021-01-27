@@ -40,20 +40,10 @@ const lid = process.env.DIDI_LID
 const API_HOST = 'https://bosp-api.xiaojukeji.com/';
 $.showLog = $.getdata('didi_showLog') ? $.getdata('didi_showLog') === 'true' : false;
 $.didiLottery = $.getdata('didi_lottery') ? $.getdata('didi_lottery') === 'true' : false;
-$.token = $.getdata('didi_token');
-$.cityId = $.getdata('didi_city_id');
-$.lid = $.getdata('didi_lid');
+
 $.clientId = 1;
 $.result = [];
 
-!(async () => {
-  if (!getCookies()) return;
-  await checkIn();
-  await goldLottery();
-  await showMsg();
-})()
-  .catch(e => $.logErr(e))
-  .finally(() => $.done());
 
 function getCookies() {
   if (!$.token || !$.cityId) {

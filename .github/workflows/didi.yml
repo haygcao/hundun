@@ -18,6 +18,7 @@ jobs:
         didiLidKey: ${{ secrets.didi_lid }}
         didiActivityIdKey: ${{ secrets.didi_activity_id }}
         didiChannelIdKey: ${{ secrets.didi_channel_id }}
+        source_id: ${{ secrets.source_id }}
         TZ: Asia/shanghai
     steps:
       - name: Checkout
